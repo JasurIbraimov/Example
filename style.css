@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+
+}
+.slider-panel {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+.slider-panel .slider-btn  {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 48px;
+    color: rgba(255, 255, 255, .5);
+    transition: .25s;
+    padding: 0px 10px;
+}
+.slider-panel .radios {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+.slider-panel .pause { 
+    border-radius: 50%;
+    width: 40px;
+    z-index: 2;
+    top: 3px;
+    height: 40px;
+    left: 10px;
+}
+.slide-text {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.slider-panel .radios button {
+    width: 40px;
+    height:40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, .5);
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.slider-panel .slider-btn:hover,  .slider-panel .radios button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255,1);
+}
+.slider-panel .left {
+    left: 10px;
+}
+.slider-panel .right {
+    right: 10px;
+}
+.slider-box {
+    transform: translateX(0%);
+    transition-duration: .7s;
+    transition-timing-function: cubic-bezier(1, 1.59, .61, .74);
+    height: 450px;
+}
+
+.slider-item {
+    width: 700px;
+    height: 100%;
+    overflow: hidden;
+}
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.active-radio {
+    background-color: #2ecc71 !important;
+}
